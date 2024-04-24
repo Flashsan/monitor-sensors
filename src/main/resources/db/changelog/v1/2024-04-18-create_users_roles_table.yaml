@@ -1,0 +1,14 @@
+databaseChangeLog:
+  - changeSet:
+      id: Create users_roles table.
+      author: Aliaksandr Hryharovich
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  name: user_id
+                  type: UUID
+              - column:
+                  name: role_id
+                  type: BIGINT
+            tableName: users_roles

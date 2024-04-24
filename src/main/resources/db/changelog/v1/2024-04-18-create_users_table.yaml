@@ -1,0 +1,28 @@
+databaseChangeLog:
+  - changeSet:
+      id: Create users table.
+      author: Aliaksandr Hryharovich
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: users_pkey
+                  name: id
+                  type: UUID
+              - column:
+                  name: login
+                  type: VARCHAR(32)
+              - column:
+                  name: password
+                  type: VARCHAR(255)
+              - column:
+                  name: name
+                  type: VARCHAR(128)
+              - column:
+                  defaultValueBoolean: true
+                  name: is_active
+                  type: BOOLEAN
+            tableName: users

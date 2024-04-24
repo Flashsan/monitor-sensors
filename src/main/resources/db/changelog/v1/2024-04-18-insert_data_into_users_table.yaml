@@ -1,0 +1,44 @@
+databaseChangeLog:
+  - changeSet:
+      id: Insert data to users table.
+      author: Aliaksandr Hryharovich
+      changes:
+        - createTable:
+            - insert:
+                columns:
+                  - column:
+                      name: id
+                      value: ed540bf8-9461-4f98-811e-00d2a49d49d1
+                  - column:
+                      name: login
+                      value: admin
+                  - column:
+                      name: password
+#                      admin
+                      value: $2a$12$N7WDLTMyrnl2aJRlH6amw.9h/vhapgLUyh5hfZm92UiVoOrk0HQ42
+                  - column:
+                      name: name
+                      value: admin
+                  - column:
+                      name: is_active
+                      valueBoolean: true
+                tableName: users
+            - insert:
+                columns:
+                  - column:
+                      name: id
+                      value: ed540bf8-9461-4f98-811e-00d2a49d49d2
+                  - column:
+                      name: login
+                      value: viewer
+                  - column:
+                      name: password
+                      #                      viewer
+                      value: $2a$12$uDgFwS3HIwXup5S78PHzvu8EDMRKc2GpTzw/rD.NNcY0qc2egReOy
+                  - column:
+                      name: name
+                      value: admin
+                  - column:
+                      name: is_active
+                      valueBoolean: true
+                tableName: users

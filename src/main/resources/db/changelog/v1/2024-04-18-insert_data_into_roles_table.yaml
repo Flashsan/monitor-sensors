@@ -1,0 +1,25 @@
+databaseChangeLog:
+  - changeSet:
+      id: Insert data to roles table.
+      author: Aliaksandr Hryharovich
+      changes:
+        - createTable:
+            columns:
+              - insert:
+                  columns:
+                    - column:
+                        name: id
+                        valueNumeric: 1
+                    - column:
+                        name: name
+                        value: ADMINISTRATOR
+                  tableName: roles
+              - insert:
+                  columns:
+                    - column:
+                        name: id
+                        valueNumeric: 2
+                    - column:
+                        name: name
+                        value: VIEWER
+                  tableName: roles
